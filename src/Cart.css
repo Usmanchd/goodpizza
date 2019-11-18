@@ -1,0 +1,99 @@
+.cross {
+  background-color: white;
+  position: relative;
+  top: -120px;
+  left: 240px;
+  color: black;
+}
+.Cart {
+  /* flex-direction: column; */
+  /* width: 25%; */
+  border-radius: 0;
+  /* position: absolute;
+  position: fixed; */
+  font-size: 0.8rem;
+  color: black;
+  /* right: 0px;
+  top: 12vh;
+  z-index: 100; */
+  /* background: rgba(102, 84, 84, 0.836); */
+  /* min-height: 88vh; */
+  margin: 40px auto 0px auto;
+  padding-bottom: 0px;
+  width: 45%;
+  transition: all 0.4s ease-in-out;
+}
+.hidden {
+  transform: translateX(100%) scale(1) skew(0deg, 0deg);
+}
+.show {
+  transform: translateX(0%) scale(1) skew(0deg, 0deg);
+  -webkit-box-shadow: -19px -8px 41px -13px rgba(0, 0, 0, 0.61);
+  box-shadow: -19px -8px 41px -13px rgba(0, 0, 0, 0.61);
+  border: 2px none rgba(255, 255, 255, 0.71);
+}
+.Cart h1 {
+  color: #3c1a5b;
+}
+.cartitems {
+  background-color: rgba(247, 247, 247, 0.945);
+  padding: 1.2rem;
+  /* border: 2px solid black; */
+  margin: 2px;
+  border-radius: 5px;
+  min-height: 80px;
+  max-height: auto;
+}
+.cartitems p,
+.cartitems button {
+  display: inline-block;
+  height: 30px;
+  margin: 5px;
+}
+.cartitems button {
+  background-color: rgba(20, 75, 255, 0.959);
+  border: none;
+  /* width: 100%; */
+  border-radius: 5px;
+  color: white;
+  padding: 0 20px;
+  transition: all 0.3s ease-in-out;
+}
+
+.cartitems button:hover {
+  -webkit-box-shadow: 6px 7px 15px -2px rgba(0, 0, 0, 0.69);
+  box-shadow: 6px 7px 15px -2px rgba(0, 0, 0, 0.69);
+}
+.Cartbuttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.totalp {
+  color: black;
+  float: right;
+  margin-right: 10px;
+}
+.btncheckout {
+  background-color: rgb(20, 75, 255);
+  border: none;
+  width: 100%;
+  border-radius: 5px;
+  color: white;
+  padding: 1.2rem;
+  margin-top: 1rem;
+  border: 2px solid #3c1a5b;
+  font-weight: bold;
+  transition: all 0.3s ease-in-out;
+}
+.btncheckout:hover {
+  -webkit-box-shadow: 6px 7px 15px -2px rgba(0, 0, 0, 0.69);
+  box-shadow: 6px 7px 15px -2px rgba(0, 0, 0, 0.69);
+}
+@media screen and (max-width: 668px) {
+  .Cart {
+    width: 40%;
+  }
+}
