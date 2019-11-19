@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/goodpizza/static/css/main.5ba0c793.chunk.css",
+    "main.css": "/goodpizza/static/css/main.734ea8be.chunk.css",
     "main.js": "/goodpizza/static/js/main.496633a8.chunk.js",
     "main.js.map": "/goodpizza/static/js/main.496633a8.chunk.js.map",
     "runtime-main.js": "/goodpizza/static/js/runtime-main.f8c329b8.js",
@@ -8,9 +8,9 @@
     "static/js/2.35fe1d6e.chunk.js": "/goodpizza/static/js/2.35fe1d6e.chunk.js",
     "static/js/2.35fe1d6e.chunk.js.map": "/goodpizza/static/js/2.35fe1d6e.chunk.js.map",
     "index.html": "/goodpizza/index.html",
-    "precache-manifest.a3c063004d9355723a0ffccc148460a6.js": "/goodpizza/precache-manifest.a3c063004d9355723a0ffccc148460a6.js",
+    "precache-manifest.b1cfcce1cf1c741b584808ab874b1c16.js": "/goodpizza/precache-manifest.b1cfcce1cf1c741b584808ab874b1c16.js",
     "service-worker.js": "/goodpizza/service-worker.js",
-    "static/css/main.5ba0c793.chunk.css.map": "/goodpizza/static/css/main.5ba0c793.chunk.css.map",
+    "static/css/main.734ea8be.chunk.css.map": "/goodpizza/static/css/main.734ea8be.chunk.css.map",
     "static/media/1.jpg": "/goodpizza/static/media/1.c81cea7c.jpg",
     "static/media/2.jpg": "/goodpizza/static/media/2.142f63c6.jpg",
     "static/media/3.jpg": "/goodpizza/static/media/3.485ec987.jpg",
@@ -21,7 +21,7 @@
   "entrypoints": [
     "static/js/runtime-main.f8c329b8.js",
     "static/js/2.35fe1d6e.chunk.js",
-    "static/css/main.5ba0c793.chunk.css",
+    "static/css/main.734ea8be.chunk.css",
     "static/js/main.496633a8.chunk.js"
   ]
 }
