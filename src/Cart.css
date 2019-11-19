@@ -11,7 +11,7 @@
   border-radius: 0;
   /* position: absolute;
   position: fixed; */
-  font-size: 0.8rem;
+  font-size: 1rem;
   color: black;
   /* right: 0px;
   top: 12vh;
@@ -36,7 +36,7 @@
   color: #3c1a5b;
 }
 .cartitems {
-  background-color: rgba(247, 247, 247, 0.945);
+  background-color: rgba(221, 221, 221, 0.945);
   padding: 1.2rem;
   /* border: 2px solid black; */
   margin: 2px;
@@ -51,16 +51,19 @@
   margin: 5px;
 }
 .cartitems button {
-  background-color: rgba(20, 75, 255, 0.959);
-  border: none;
+  background-color: transparent;
+  border: 0.5px solid rgb(31, 29, 29);
+  color: black;
   /* width: 100%; */
   border-radius: 5px;
-  color: white;
   padding: 0 20px;
   transition: all 0.3s ease-in-out;
 }
 
 .cartitems button:hover {
+  background-color: rgb(39, 37, 37);
+  border: 0.5px solid white;
+  color: white;
   -webkit-box-shadow: 6px 7px 15px -2px rgba(0, 0, 0, 0.69);
   box-shadow: 6px 7px 15px -2px rgba(0, 0, 0, 0.69);
 }
@@ -77,23 +80,26 @@
   margin-right: 10px;
 }
 .btncheckout {
-  background-color: rgb(20, 75, 255);
+  background-color: transparent;
   border: none;
   width: 100%;
   border-radius: 5px;
-  color: white;
+  color: black;
   padding: 1.2rem;
   margin-top: 1rem;
-  border: 2px solid #3c1a5b;
+  border: 0.5px solid rgb(51, 47, 47);
   font-weight: bold;
   transition: all 0.3s ease-in-out;
 }
 .btncheckout:hover {
+  background-color: rgb(26, 24, 24);
+  color: white;
+  border: 0.5px solid white;
   -webkit-box-shadow: 6px 7px 15px -2px rgba(0, 0, 0, 0.69);
   box-shadow: 6px 7px 15px -2px rgba(0, 0, 0, 0.69);
 }
 @media screen and (max-width: 668px) {
   .Cart {
-    width: 40%;
+    width: 90%;
   }
 }

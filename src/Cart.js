@@ -5,6 +5,7 @@ function Buttons(props) {
   if (props.item.count === 1) {
     return (
       <div className="Cartbuttons">
+        
         <button onClick={() => props.removeCart(props.item)}>
           Remove Item {props.item.count}
         </button>

@@ -49,6 +49,7 @@
   color: white !important;
   border: 0.1px solid white !important;
 }
+
 .d {
   margin: 10px;
   width: 90%;
@@ -67,24 +68,24 @@
   .itemsPage {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    width: 70%;
+    width: 80%;
   }
   .grid img {
-    height: 30vh;
+    width: 100%;
   }
 }
-@media screen and (max-width: 668px) {
+@media screen and (max-width: 540px) {
   .itemsPage {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    width: 80%;
+    grid-template-columns: 1fr;
+    width: 65%;
     justify-content: center;
-    margin: 0% 12%;
+    margin: 10px auto;
   }
   .grid {
     height: auto;
   }
   .grid img {
-    height: 30vh;
+    width: 100%;
   }
 }

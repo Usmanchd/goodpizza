@@ -1,3 +1,6 @@
+button:focus {
+  outline: none;
+}
 .light {
   position: relative;
   top: -25px;
