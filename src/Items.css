@@ -83,9 +83,9 @@
     margin: 10px auto;
   }
   .grid {
-    height: auto;
+    height: 69vh;
   }
-  .grid img {
+  /* .grid img {
     width: 100%;
-  }
+  } */
 }
