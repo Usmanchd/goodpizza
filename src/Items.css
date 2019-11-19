@@ -82,10 +82,7 @@
     justify-content: center;
     margin: 10px auto;
   }
-  .grid {
-    height: 65vh;
-  }
   .grid img {
-    height: 30vh;
+    widows: 100%;
   }
 }
