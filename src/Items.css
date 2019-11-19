@@ -71,6 +71,7 @@
     width: 80%;
   }
   .grid img {
+    height: auto;
     width: 100%;
   }
 }
