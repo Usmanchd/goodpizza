@@ -60,7 +60,8 @@
   transition: all 0.3s ease-in-out;
 }
 
-.cartitems button:hover {
+.cartitems button:hover,
+.cartitems button:active {
   background-color: rgb(39, 37, 37);
   border: 0.5px solid white;
   color: white;
@@ -91,7 +92,8 @@
   font-weight: bold;
   transition: all 0.3s ease-in-out;
 }
-.btncheckout:hover {
+.btncheckout:hover,
+.btncheckout:active {
   background-color: rgb(26, 24, 24);
   color: white;
   border: 0.5px solid white;

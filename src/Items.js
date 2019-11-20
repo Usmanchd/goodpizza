@@ -34,21 +34,21 @@ function Items(props) {
       image: logo4,
       Price: 160,
       description:
-        'Zinger burger is hot and crispy burger and this is the best in Pakistan Burger Zingor'
+        'Zinger burger is hot and crispy burger and this is the best in Pakistan Burger Zinger'
     },
     {
-      name: 'Zinger burger',
+      name: 'Zinger burger/1',
       image: logo5,
-      Price: 160,
+      Price: 190,
       description:
-        'Zinger burger is hot and crispy burger and this is the best in Pakistan Burger Zingor'
+        'Zinger burger is hot and crispy burger and this is the best in Pakistan Burger Zinger'
     },
     {
-      name: 'Zinger burger',
+      name: 'Zinger burger/3',
       image: logo6,
-      Price: 160,
+      Price: 260,
       description:
-        'Zinger burger is hot and crispy burger and this is the best in Pakistan Burger Zingor'
+        'Zinger burger is hot and crispy burger and this is the best in Pakistan Burger Zinger'
     }
   ];
 

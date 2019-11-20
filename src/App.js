@@ -541,18 +541,15 @@ function App() {
                 <div className="media-body">
                   <div className="quote pb_text-black">&ldquo;</div>
                   <blockquote className="mb-5 pb_font-20">
-                    Far far away, behind the word mountains, far from the
-                    countries Vokalia and Consonantia, there live the blind
-                    texts. Separated they live in Bookmarksgrove right at the
-                    coast of the Semantics, a large language ocean.
+                    Good Things about shop..
                   </blockquote>
                   <img
                     className="d-flex text-center mx-auto mb-3 rounded-circle"
                     src="assets/images/persons/person_1.jpg"
                     alt="Generic placeholder"
                   />
-                  <h3 className="heading">Garry Alexander</h3>
-                  <p className="subheading">@garry</p>
+                  <h3 className="heading">Usman Chaudhary</h3>
+                  <p className="subheading">@usman</p>
                 </div>
               </div>
             </div>
@@ -561,18 +558,15 @@ function App() {
                 <div className="media-body">
                   <div className="quote pb_text-black">&ldquo;</div>
                   <blockquote className="mb-5 pb_font-20">
-                    A small river named Duden flows by their place and supplies
-                    it with the necessary regelialia. It is a paradisematic
-                    country, in which roasted parts of sentences fly into your
-                    mouth.
+                    Good Things about shop..
                   </blockquote>
                   <img
                     className="d-flex text-center mx-auto mb-3 rounded-circle"
                     src="assets/images/persons/person_5.jpg"
                     alt="Generic placeholder"
                   />
-                  <h3 className="heading">Deborah Smith</h3>
-                  <p className="subheading">@deborah</p>
+                  <h3 className="heading">Usman Chaudhary</h3>
+                  <p className="subheading">@usman</p>
                 </div>
               </div>
             </div>
@@ -581,18 +575,15 @@ function App() {
                 <div className="media-body">
                   <div className="quote pb_text-black">&ldquo;</div>
                   <blockquote className="mb-5 pb_font-20">
-                    Even the all-powerful Pointing has no control about the
-                    blind texts it is an almost unorthographic life One day
-                    however a small line of blind text by the name of Lorem
-                    Ipsum decided to leave for the far World of Grammar.
+                    Good Things about shop..
                   </blockquote>
                   <img
                     className="d-flex text-center mx-auto mb-3 rounded-circle"
                     src="assets/images/persons/person_2.jpg"
                     alt="Generic placeholder"
                   />
-                  <h3 className="heading">James Robertson</h3>
-                  <p className="subheading">@james</p>
+                  <h3 className="heading">Usman Chaudhary</h3>
+                  <p className="subheading">@usman</p>
                 </div>
               </div>
             </div>

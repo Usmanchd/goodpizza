@@ -1,3 +1,11 @@
+* {
+  margin: 0px;
+  padding: 0px;
+}
+html,
+body {
+  overflow-x: hidden;
+}
 button:focus {
   outline: none;
 }
@@ -12,3 +20,4 @@ button:focus {
 .pb_section {
   padding: 5em 0 !important;
 }
+
