@@ -6,6 +6,8 @@ import logo3 from './img/3.jpg';
 import logo4 from './img/4.jpg';
 import logo5 from './img/5.jpg';
 import logo6 from './img/6.jpg';
+import { Link, useRouteMatch } from 'react-router-dom';
+
 function Items(props) {
   const products = [
     {
@@ -37,27 +39,29 @@ function Items(props) {
         'Zinger burger is hot and crispy burger and this is the best in Pakistan Burger Zinger'
     },
     {
-      name: 'Zinger burger/1',
+      name: 'Zinger burger 1',
       image: logo5,
       Price: 190,
       description:
         'Zinger burger is hot and crispy burger and this is the best in Pakistan Burger Zinger'
     },
     {
-      name: 'Zinger burger/3',
+      name: 'Zinger burger 3',
       image: logo6,
       Price: 260,
       description:
         'Zinger burger is hot and crispy burger and this is the best in Pakistan Burger Zinger'
     }
   ];
-
+  const match = useRouteMatch();
   return (
     <div className="itemsPage">
       {products.map((product, index) => {
         return (
           <div key={index} className="grid">
-            <img src={product.image} alt="itemImage" />
+            <Link to={`${match.url}/${product.name}`}>
+              <img src={product.image} alt="itemImage" />
+            </Link>
             <div className="d">
               <p>
                 {/* <b>Name :</b> */}
@@ -72,7 +76,11 @@ function Items(props) {
                 {product.Price} Rs
               </p>
               <button
+                type="button"
                 className="btn smoothscroll pb_outline-light rounded-0 btn-xl pb_font-13 pb_letter-spacing-2 p-3"
+                data-toggle="popover"
+                title="Popover title"
+                data-content="And here's some amazing content. It's very engaging. Right?"
                 onClick={() => props.addCart(product)}
               >
                 Add to Cart
