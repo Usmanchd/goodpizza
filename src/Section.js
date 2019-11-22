@@ -20,7 +20,7 @@ const Section = () => {
               </a> */}
             <h1 className="heading mb-3" style={{ color: 'black' }}>
               <b>
-                <span style={{ color: '#c4302b' }}>Good</span> Pizza
+                <span style={{ color: '#c4302b' }}>Good</span><b>Pizza</b>
               </b>
             </h1>
             <div className="sub-heading">
