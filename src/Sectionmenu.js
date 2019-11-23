@@ -23,7 +23,7 @@ const Sectionmenu = props => {
             <Item />
           </Route>
           <Route path={`${match.path}`}>
-            <Items addCart={props.addtoCart} />
+            <Items addCart={props.addCart} />
           </Route>
         </Switch>
       </div>

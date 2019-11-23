@@ -5,8 +5,8 @@ import Sectionmenu from './Sectionmenu';
 const Home = props => {
   return (
     <div>
-      <Section />s
-      <Sectionmenu addtoCart={props.addtoCart} />
+      <Section />
+      <Sectionmenu addCart={props.addCart} />
     </div>
   );
 };

@@ -138,7 +138,7 @@ function App() {
 
         <Route path="/">
           <ScrollToTop>
-            <Home addtoCart={addtoCart} />
+            <Home addCart={addtoCart} />
           </ScrollToTop>
         </Route>
       </Switch>
