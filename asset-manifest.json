@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/goodpizza/static/css/main.dc8ce90a.chunk.css",
-    "main.js": "/goodpizza/static/js/main.6b66ec5f.chunk.js",
-    "main.js.map": "/goodpizza/static/js/main.6b66ec5f.chunk.js.map",
+    "main.js": "/goodpizza/static/js/main.9da18f38.chunk.js",
+    "main.js.map": "/goodpizza/static/js/main.9da18f38.chunk.js.map",
     "runtime-main.js": "/goodpizza/static/js/runtime-main.f8c329b8.js",
     "runtime-main.js.map": "/goodpizza/static/js/runtime-main.f8c329b8.js.map",
-    "static/js/2.c560ec28.chunk.js": "/goodpizza/static/js/2.c560ec28.chunk.js",
-    "static/js/2.c560ec28.chunk.js.map": "/goodpizza/static/js/2.c560ec28.chunk.js.map",
+    "static/js/2.56c3f1db.chunk.js": "/goodpizza/static/js/2.56c3f1db.chunk.js",
+    "static/js/2.56c3f1db.chunk.js.map": "/goodpizza/static/js/2.56c3f1db.chunk.js.map",
     "index.html": "/goodpizza/index.html",
-    "precache-manifest.16ee8bc6e24b7bf3bd6fecb7085835b0.js": "/goodpizza/precache-manifest.16ee8bc6e24b7bf3bd6fecb7085835b0.js",
+    "precache-manifest.78268c15754e4798a8e76064ce1ed5f1.js": "/goodpizza/precache-manifest.78268c15754e4798a8e76064ce1ed5f1.js",
     "service-worker.js": "/goodpizza/service-worker.js",
     "static/css/main.dc8ce90a.chunk.css.map": "/goodpizza/static/css/main.dc8ce90a.chunk.css.map",
     "static/media/1.jpg": "/goodpizza/static/media/1.c81cea7c.jpg",
@@ -20,8 +20,8 @@
   },
   "entrypoints": [
     "static/js/runtime-main.f8c329b8.js",
-    "static/js/2.c560ec28.chunk.js",
+    "static/js/2.56c3f1db.chunk.js",
     "static/css/main.dc8ce90a.chunk.css",
-    "static/js/main.6b66ec5f.chunk.js"
+    "static/js/main.9da18f38.chunk.js"
   ]
 }
