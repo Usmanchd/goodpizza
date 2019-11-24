@@ -1,5 +1,5 @@
 import React from 'react';
-
+import { Link } from 'react-router-dom';
 const About = () => {
   return (
     <React.Fragment>
@@ -36,12 +36,12 @@ const About = () => {
 
               <p></p>
               <p>
-                <a
-                  href="#section-menu"
+                <Link
+                  to="/sectionmenu"
                   className="smoothscroll text-danger text-uppercase"
                 >
                   See our menu <i className="ion-arrow-down-c"></i>
-                </a>
+                </Link>
               </p>
             </div>
           </div>

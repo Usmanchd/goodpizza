@@ -8,6 +8,7 @@ import About from './About';
 import Cart from './Cart';
 import Footer from './Footer';
 import Sectionmenu from './Sectionmenu';
+import Sidebarmenu from './Sidebarmenu';
 
 function App() {
   const initialVal = () => {
@@ -135,7 +136,11 @@ function App() {
             <Sectionmenu addCart={addtoCart} />
           </ScrollToTop>
         </Route>
-
+        <Route path="/navbar-slide">
+          <ScrollToTop>
+            <Sidebarmenu item={Cartitems} totalPrice={total} />
+          </ScrollToTop>
+        </Route>
         <Route path="/">
           <ScrollToTop>
             <Home addCart={addtoCart} />

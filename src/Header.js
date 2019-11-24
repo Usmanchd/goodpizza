@@ -62,7 +62,6 @@ const Header = props => {
                           style={{ cursor: 'pointer' }}
                           onClick={() => props.removeCart(c)}
                         >
-                          {' '}
                           X
                         </span>
                       </p>

@@ -6,7 +6,7 @@ import { Switch, Route, useRouteMatch } from 'react-router-dom';
 const Sectionmenu = props => {
   const match = useRouteMatch();
   return (
-    <section id="section-menu">
+    <section id="section-menu" style={{ marginTop: '20px' }}>
       <div>
         <div className="row justify-content-center mb-5">
           <div className="col-md-10 text-center">

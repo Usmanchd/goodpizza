@@ -20,4 +20,8 @@ button:focus {
 .pb_section {
   padding: 5em 0 !important;
 }
-
+.sidebar li {
+  padding: 10px 5px;
+  background-color: rgba(202, 191, 191, 0.87);
+  margin: 2px 0px;
+}
