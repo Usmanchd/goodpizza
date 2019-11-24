@@ -1,62 +1,62 @@
-import React from 'react';
-import './Items.css';
-import logo1 from './img/1.jpg';
-import logo2 from './img/2.jpg';
-import logo3 from './img/3.jpg';
-import logo4 from './img/4.jpg';
-import logo5 from './img/5.jpg';
-import logo6 from './img/6.jpg';
-import { Link, useRouteMatch } from 'react-router-dom';
+import React from "react";
+import "./Items.css";
+// import logo1 from './img/1.jpg';
+// import logo2 from './img/2.jpg';
+// import logo3 from './img/3.jpg';
+// import logo4 from './img/4.jpg';
+// import logo5 from './img/5.jpg';
+// import logo6 from './img/6.jpg';
+import { Link, useRouteMatch } from "react-router-dom";
 
 function Items(props) {
-  const products = [
-    {
-      name: 'Anday wala burger',
-      image: logo1,
-      Price: 240,
-      description:
-        'Anday wala burger is best in Pakistan mje andaya wala burger.'
-    },
-    {
-      name: 'Shwarma',
-      image: logo2,
-      Price: 150,
-      description:
-        'Shwarma with extra chiken and socies is best in Pakistan you can taste the best shwarma here.'
-    },
-    {
-      name: 'Lazania Pizza',
-      image: logo3,
-      Price: 540,
-      description:
-        'Lizania has spicy and juicy tast and it is best in Pakistan Chiken Lazania'
-    },
-    {
-      name: 'Zinger burger',
-      image: logo4,
-      Price: 160,
-      description:
-        'Zinger burger is hot and crispy burger and this is the best in Pakistan Burger Zinger'
-    },
-    {
-      name: 'Zinger burger 1',
-      image: logo5,
-      Price: 190,
-      description:
-        'Zinger burger is hot and crispy burger and this is the best in Pakistan Burger Zinger'
-    },
-    {
-      name: 'Zinger burger 3',
-      image: logo6,
-      Price: 260,
-      description:
-        'Zinger burger is hot and crispy burger and this is the best in Pakistan Burger Zinger'
-    }
-  ];
+  // const products = [
+  //   {
+  //     name: 'Anday wala burger',
+  //     image: logo1,
+  //     Price: 240,
+  //     description:
+  //       'Anday wala burger is best in Pakistan mje andaya wala burger.'
+  //   },
+  //   {
+  //     name: 'Shwarma',
+  //     image: logo2,
+  //     Price: 150,
+  //     description:
+  //       'Shwarma with extra chiken and socies is best in Pakistan you can taste the best shwarma here.'
+  //   },
+  //   {
+  //     name: 'Lazania Pizza',
+  //     image: logo3,
+  //     Price: 540,
+  //     description:
+  //       'Lizania has spicy and juicy tast and it is best in Pakistan Chiken Lazania'
+  //   },
+  //   {
+  //     name: 'Zinger burger',
+  //     image: logo4,
+  //     Price: 160,
+  //     description:
+  //       'Zinger burger is hot and crispy burger and this is the best in Pakistan Burger Zinger'
+  //   },
+  //   {
+  //     name: 'Zinger burger 1',
+  //     image: logo5,
+  //     Price: 190,
+  //     description:
+  //       'Zinger burger is hot and crispy burger and this is the best in Pakistan Burger Zinger'
+  //   },
+  //   {
+  //     name: 'Zinger burger 3',
+  //     image: logo6,
+  //     Price: 260,
+  //     description:
+  //       'Zinger burger is hot and crispy burger and this is the best in Pakistan Burger Zinger'
+  //   }
+  // ];
   const match = useRouteMatch();
   return (
     <div className="itemsPage">
-      {products.map((product, index) => {
+      {props.products.map((product, index) => {
         return (
           <div key={index} className="grid">
             <Link to={`${match.url}/${product.name}`}>
@@ -85,7 +85,15 @@ function Items(props) {
               >
                 Add to Cart
               </button>
+              
             </div>
+            <div
+                class="alert alert-primary"
+                style={{ display: product.aleert }}
+                role="alert"
+              >
+                Item Added to Cart
+              </div>
           </div>
         );
       })}
