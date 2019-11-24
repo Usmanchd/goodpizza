@@ -1,5 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { Icon } from 'react-icons-kit';
+import { shoppingCart } from 'react-icons-kit/fa/shoppingCart';
 
 const Header = props => {
   return (
@@ -50,7 +52,8 @@ const Header = props => {
               </li>
               <li className="more dropdown">
                 <Link to="/cart">
-                  <i className="fa fa-ellipsis-v" aria-hidden="true"></i>
+                  <Icon icon={shoppingCart} />
+                  {/* <i className="fa fa-ellipsis-v" aria-hidden="true"></i> */}
                 </Link>
                 <span className="selector"></span>
                 <ul style={{ padding: '5px' }}>

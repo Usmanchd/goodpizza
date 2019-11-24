@@ -1,7 +1,8 @@
-import React from "react";
-import Items from "./Items";
-import Item from "./Item";
-import { Switch, Route, useRouteMatch } from "react-router-dom";
+import React from 'react';
+import Items from './Items';
+import Item from './Item';
+import Mycarousel from './Mycarousel';
+import { Switch, Route, useRouteMatch } from 'react-router-dom';
 
 const Sectionmenu = props => {
   const match = useRouteMatch();
@@ -12,12 +13,14 @@ const Sectionmenu = props => {
           <div className="col-md-10 text-center">
             <h2
               className="mb-4 text-uppercase pb_letter-spacing-2"
-              style={{ marginTop: "40px", paddingBottom: "0px" }}
+              style={{ marginTop: '40px', paddingBottom: '0px' }}
             >
               Menu
             </h2>
           </div>
         </div>
+        <Mycarousel />
+        
         <Switch>
           <Route path={`${match.path}/:name`}>
             <Item />

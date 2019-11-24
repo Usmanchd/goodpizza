@@ -5,6 +5,7 @@ function Buttons(props) {
   if (props.item.count === 1) {
     return (
       <div className="Cartbuttons">
+        <button style={{ opacity: '0.4' }}>-</button>
         <button onClick={() => props.removeCart(props.item)}>
           Remove Item {props.item.count}
         </button>
@@ -31,22 +32,27 @@ function Cart(props) {
       {props.item.map((c, index) => {
         return (
           <div key={index} className="cartitems">
-            <p>
-              <b>Name :</b>
-              {c.name}
-            </p>
-            {/* <p>
+            <div className="cartrow">
+              <span>
+                <p>
+                  <b>Name :</b>
+                  {c.name}
+                </p>
+                {/* <p>
                     <b>Description :</b>
                     {c.description}
                   </p> */}
-            <p>
-              <b>Price :</b>
-              {c.showprice}
-            </p>
-            {/* <p>
+                <p>
+                  <b>Price :</b>
+                  {c.showprice}
+                </p>
+                {/* <p>
                     <b>Count :</b>
                     {c.count}
                   </p> */}
+              </span>
+                <img src={c.image} alt={c.name} width="20%" />
+            </div>
             <Buttons
               item={c}
               removeSingle={props.removeSingle}
