@@ -1,15 +1,25 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import './Items.css';
-import { Link, useRouteMatch } from 'react-router-dom';
-
+import { Link } from 'react-router-dom';
+import { Products } from './data';
 function Items(props) {
-  const match = useRouteMatch();
+  const [products, setproducts] = useState(Products);
+
+  useEffect(() => {
+    if (props.category === 'ALL') return;
+    else {
+      props.category
+        ? setproducts(Products.filter(p => p.category === props.category))
+        : setproducts(Products.filter(p => p.isFeatured === 'true'));
+    }
+  }, [props.category]);
+
   return (
     <div className="itemsPage">
-      {props.products.map((product, index) => {
+      {products.map((product, index) => {
         return (
           <div key={index} className="grid">
-            <Link to={`${match.url}/${product.name}`}>
+            <Link to={`/sectionmenu/${product.name}`}>
               <img src={product.image} alt="itemImage" />
             </Link>
             <div className="d">
@@ -35,13 +45,6 @@ function Items(props) {
               >
                 Add to Cart
               </button>
-            </div>
-            <div
-              class="alert alert-primary"
-              style={{ display: product.aleert }}
-              role="alert"
-            >
-              Item Added to Cart
             </div>
           </div>
         );

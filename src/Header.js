@@ -32,17 +32,17 @@ const Header = props => {
                 <Link to="/">Home</Link>
               </li>
               <li className="dropdown">
-                <Link to="/sectionmenu">Menu</Link>
+                <Link to="/sectionmenu/all">Menu</Link>
                 <span class="selector"></span>
                 <ul>
                   <li>
-                    <Link to="/">Deals</Link>
+                    <Link to="/sectionmenu/deal">Deals</Link>
                   </li>
                   <li>
-                    <Link to="">Pizza</Link>
+                    <Link to="/sectionmenu/pizza">Pizza</Link>
                   </li>
                   <li>
-                    <Link to="">Burgers</Link>
+                    <Link to="/sectionmenu/burger">Burgers</Link>
                   </li>
                 </ul>
               </li>
@@ -54,6 +54,7 @@ const Header = props => {
                 <Link to="/cart">
                   <Icon icon={shoppingCart} />
                   {/* <i className="fa fa-ellipsis-v" aria-hidden="true"></i> */}
+                  <span>({props.cart.length})</span>
                 </Link>
                 <span className="selector"></span>
                 <ul style={{ padding: '5px' }}>

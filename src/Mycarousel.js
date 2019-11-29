@@ -4,7 +4,7 @@ import logo2 from './img/2.jpg';
 import logo3 from './img/3.jpg';
 import logo4 from './img/4.jpg';
 import logo5 from './img/5.jpg';
-import logo6 from './img/6.jpg';
+// import logo6 from './img/6.jpg';
 
 import CarouselSlider from 'react-carousel-slider';
 

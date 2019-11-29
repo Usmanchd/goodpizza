@@ -21,10 +21,12 @@
   -webkit-box-shadow: 15px 20px 21px -11px rgba(0, 0, 0, 0.69);
   box-shadow: 15px 20px 21px -11px rgba(0, 0, 0, 0.69);
   transform: scale(0.87) skew(0deg, -4deg);
+  transition: all 0.2s ease-in-out;
 }
-/* .grid:hover {
-  border: 1px solid rgb(41, 41, 41);
-} */
+.grid:hover {
+  transform: scale(0.92) skew(0deg, -1deg);
+}
+
 .grid p {
   margin: 15px;
 }
