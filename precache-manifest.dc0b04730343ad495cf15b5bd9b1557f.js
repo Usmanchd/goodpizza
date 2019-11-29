@@ -1,23 +1,23 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "e1b08b3fc72eb67c388faa53dfd4d44b",
+    "revision": "f58dc18ac1c7d7ac54506d944d96c1cf",
     "url": "/goodpizza/index.html"
   },
   {
-    "revision": "1a160d8b155edc7b2762",
+    "revision": "075fefe3b3e61f594561",
     "url": "/goodpizza/static/css/2.5361492b.chunk.css"
   },
   {
-    "revision": "464f3c711a63c4ed2ca9",
-    "url": "/goodpizza/static/css/main.e73dc56f.chunk.css"
+    "revision": "7dfe91ee1e76587138ce",
+    "url": "/goodpizza/static/css/main.f82c5086.chunk.css"
   },
   {
-    "revision": "1a160d8b155edc7b2762",
-    "url": "/goodpizza/static/js/2.bb7182b1.chunk.js"
+    "revision": "075fefe3b3e61f594561",
+    "url": "/goodpizza/static/js/2.bc87e630.chunk.js"
   },
   {
-    "revision": "464f3c711a63c4ed2ca9",
-    "url": "/goodpizza/static/js/main.24687fda.chunk.js"
+    "revision": "7dfe91ee1e76587138ce",
+    "url": "/goodpizza/static/js/main.6ae282e0.chunk.js"
   },
   {
     "revision": "6cb80ac36b14426364ff",
