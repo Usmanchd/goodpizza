@@ -18,10 +18,8 @@ const Section = () => {
               >
                 <i className="ion-ios-play"></i>
               </a> */}
-            <h1 className="heading mb-3" style={{ color: 'black' }}>
-              <b>
-                <span style={{ color: '#c4302b' }}>Good</span><b>Pizza</b>
-              </b>
+            <h1 className="display-1" style={{ color: 'black' }}>
+              <span style={{ color: '#c4302b' }}>Good</span>Pizza
             </h1>
             <div className="sub-heading">
               <p className="mb-5">

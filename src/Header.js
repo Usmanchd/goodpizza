@@ -1,9 +1,19 @@
-import React from 'react';
+import React, { useEffect, useState, useContext } from 'react';
 import { Link } from 'react-router-dom';
 import { Icon } from 'react-icons-kit';
 import { shoppingCart } from 'react-icons-kit/fa/shoppingCart';
-
-const Header = props => {
+import { store } from './store/store';
+const Header = () => {
+  const { state, dispatch } = useContext(store);
+  const { cart, category } = state;
+  const [totalprice, settotalprice] = useState(0);
+  useEffect(
+    () =>
+      settotalprice(
+        cart.reduce((amount, c) => (amount += c.count * c.Price), 0)
+      ),
+    [cart]
+  );
   return (
     <React.Fragment>
       <nav
@@ -13,37 +23,79 @@ const Header = props => {
       >
         <div className="container">
           <div className="head">
-            <Link to="/" className="brand">
-              <div className="logo">
+            <Link to="/" className="brand ">
+              <div
+                className="logo"
+                style={{
+                  height: '42.7px'
+                }}
+              >
                 <img
                   className="image"
                   src="assets/images/restaurant/goodpizza.jpg"
                   alt="Branding"
+                  style={{
+                    paddingBottom: '5px'
+                  }}
                 />
               </div>
-              <div className="title">
-                <h3>Good Pizza</h3>
+              <div
+                className="title"
+                onClick={() =>
+                  dispatch({ type: 'Change Category', payload: 'All' })
+                }
+              >
+                <h3
+                  style={{
+                    position: 'absolute',
+                    left: '50%',
+                    transform: 'translatex(-50%)'
+                  }}
+                >
+                  <span style={{ color: '#c4302b' }}>Good</span> Pizza
+                </h3>
               </div>
             </Link>
           </div>
           <div className="body">
             <ul>
-              <li className="home">
+              <li
+                className="home"
+                onClick={() =>
+                  dispatch({ type: 'Change Category', payload: 'All' })
+                }
+              >
                 <Link to="/">Home</Link>
               </li>
               <li className="dropdown">
-                <Link to="/sectionmenu/all">Menu</Link>
-                <span class="selector"></span>
+                <Link to="/sectionmenu/All">
+                  <span
+                    onClick={() =>
+                      dispatch({ type: 'Change Category', payload: 'All' })
+                    }
+                  >
+                    Menu
+                  </span>
+                </Link>
+                <span className="selector"></span>
                 <ul>
-                  <li>
-                    <Link to="/sectionmenu/deal">Deals</Link>
-                  </li>
-                  <li>
+                  {category.map(c => (
+                    <li
+                      key={c}
+                      onClick={() =>
+                        dispatch({ type: 'Change Category', payload: c })
+                      }
+                    >
+                      <Link to={`/sectionmenu/${c}`}>{c}</Link>
+                    </li>
+                  ))}
+
+                  {/* <li>
                     <Link to="/sectionmenu/pizza">Pizza</Link>
                   </li>
                   <li>
                     <Link to="/sectionmenu/burger">Burgers</Link>
-                  </li>
+                  </li> */}
                 </ul>
               </li>
 
@@ -54,17 +106,22 @@ const Header = props => {
                 <Link to="/cart">
                   <Icon icon={shoppingCart} />
                   {/* <i className="fa fa-ellipsis-v" aria-hidden="true"></i> */}
-                  <span>({props.cart.length})</span>
+                  <span>({cart.length})</span>
                 </Link>
                 <span className="selector"></span>
                 <ul style={{ padding: '5px' }}>
-                  {props.item.map((c, i) => (
+                  {cart.map((c, i) => (
                     <li key={i}>
                       <p>
                         {c.name}
                         <span
                           style={{ cursor: 'pointer' }}
-                          onClick={() => props.removeCart(c)}
+                          onClick={() =>
+                            dispatch({
+                              type: 'Remove item from cart',
+                              payload: c
+                            })
+                          }
                         >
                           X
                         </span>
@@ -72,7 +129,7 @@ const Header = props => {
                     </li>
                   ))}
                   <hr />
-                  <p>Total: {props.totalPrice}</p>
+                  <p>Total: {totalprice}</p>
                 </ul>
               </li>
             </ul>

@@ -1,9 +1,9 @@
-import logo1 from './img/1.jpg';
-import logo2 from './img/2.jpg';
-import logo3 from './img/3.jpg';
-import logo4 from './img/4.jpg';
-import logo5 from './img/5.jpg';
-import logo6 from './img/6.jpg';
+import logo1 from '../img/1.jpg';
+import logo2 from '../img/2.jpg';
+import logo3 from '../img/3.jpg';
+import logo4 from '../img/4.jpg';
+import logo5 from '../img/5.jpg';
+import logo6 from '../img/6.jpg';
 
 export const Products = [
   {
@@ -13,7 +13,7 @@ export const Products = [
     isFeatured: 'true',
     description:
       'Anday wala burger is best in Pakistan mje andaya wala burger.',
-    category: 'burger'
+    category: 'Burger'
   },
   {
     name: 'Shawarma',
@@ -22,7 +22,7 @@ export const Products = [
     isFeatured: 'true',
     description:
       'Shawarma with extra chiken and socies is best in Pakistan you can taste the best shwarma here.',
-    category: 'shawarma'
+    category: 'Shawarma'
   },
   {
     name: 'Lazania Pizza',
@@ -31,29 +31,29 @@ export const Products = [
     isFeatured: 'true',
     description:
       'Lizania has spicy and juicy tast and it is best in Pakistan Chiken Lazania',
-    category: 'pizza'
+    category: 'Pizza'
   },
   {
-    name: 'Zinger burger',
+    name: 'Zinger Burger',
     image: logo4,
     Price: 160,
     isFeatured: 'true',
     description:
-      'Zinger burger is hot and crispy burger and this is the best in Pakistan Burger Zinger',
-    category: 'burger'
+      'Zinger Burger is hot and crispy Burger and this is the best in Pakistan Burger Zinger',
+    category: 'Burger'
   },
   {
-    name: 'Zinger burger 1',
+    name: 'Zinger Burger 1',
     image: logo5,
     Price: 190,
     isFeatured: 'true',
     description:
-      'Zinger burger is hot and crispy burger and this is the best in Pakistan Burger Zinger',
+      'Zinger Burger is hot and crispy Burger and this is the best in Pakistan Burger Zinger',
 
-    category: 'burger'
+    category: 'Burger'
   },
   {
-    name: 'Zinger burger 3',
+    name: 'Zinger Burger 3',
     image: logo6,
     Price: 260,
     isFeatured: 'true',
@@ -69,16 +69,16 @@ export const Products = [
     isFeatured: 'false',
     description:
       'Lizania has spicy and juicy tast and it is best in Pakistan Chiken Lazania',
-    category: 'pizza'
+    category: 'Pizza'
   },
   {
-    name: 'mama mia pizza',
+    name: 'mama mia Pizza',
     image: logo3,
     Price: 540,
     isFeatured: 'false',
     description:
       'Lizania has spicy and juicy tast and it is best in Pakistan Chiken Lazania',
-    category: 'pizza'
+    category: 'Pizza'
   }
 ];
 export default { Products };

@@ -1,7 +1,18 @@
-import React from 'react';
+import React, { useContext, useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
+import { store } from './store/store';
 
-const Sidebarmenu = props => {
+const Sidebarmenu = () => {
+  const { state, dispatch } = useContext(store);
+  const { cart } = state;
+  const [totalprice, settotalprice] = useState(0);
+  useEffect(
+    () =>
+      settotalprice(
+        cart.reduce((amount, c) => (amount += c.count * c.Price), 0)
+      ),
+    [cart]
+  );
   return (
     <div>
       <ul className="sidebar">
@@ -33,13 +44,18 @@ const Sidebarmenu = props => {
           </Link>
           <span className="selector"></span>
           <ul style={{ padding: '5px' }}>
-            {props.item.map((c, i) => (
+            {cart.map((c, i) => (
               <li key={i}>
                 <p>
                   {c.name}
                   <span
                     style={{ cursor: 'pointer' }}
-                    onClick={() => props.removeCart(c)}
+                    onClick={() =>
+                      dispatch({
+                        type: 'Remove item from cart',
+                        payload: c
+                      })
+                    }
                   >
                     X
                   </span>
@@ -47,7 +63,7 @@ const Sidebarmenu = props => {
               </li>
             ))}
             <hr />
-            <p>Total: {props.totalPrice}</p>
+            <p>Total: {totalprice.toFixed(2)}</p>
           </ul>
         </li>
       </ul>

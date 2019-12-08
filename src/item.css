@@ -4,7 +4,7 @@
   align-items: center;
 }
 .item-details img {
-  height: 100%;
+  width: 257px;
 }
 @media screen and (max-width: 540px) {
   .item-details {

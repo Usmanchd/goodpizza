@@ -1,10 +1,26 @@
-import React, { useState } from 'react';
+import React, { useState, useContext } from 'react';
 import { useParams } from 'react-router-dom';
-import { Products } from './data';
 import './item.css';
-const Item = props => {
+import { store } from './store/store';
+
+const Item = () => {
+  const { state, dispatch } = useContext(store);
+  const { Products, cart } = state;
+
   const { name } = useParams();
   const [product] = useState(Products.filter(p => p.name === name));
+  const add = product => {
+    const index = cart.findIndex(c => c.name === product.name);
+    if (index === -1) {
+      let newproduct = { ...product, count: 1 };
+      dispatch({ type: 'Add to Cart', payload: newproduct });
+    } else {
+      let newproduct = { ...product, count: cart[index].count + 1 };
+      dispatch({ type: 'Increment Count', payload: newproduct });
+    }
+    console.log(cart);
+  };
+
   return (
     <React.Fragment>
       <div className="row justify-content-center mb-5">
@@ -28,27 +44,6 @@ const Item = props => {
               <p>{p.Price}</p>
               <p>{p.description}</p>
               <p>{p.category}</p>
-              <button
-                type="button"
-                className="btn smoothscroll "
-                data-toggle="popover"
-                title="Popover title"
-                data-content="And here's some amazing content. It's very engaging. Right?"
-                onClick={() => props.removeSingle(p)}
-              >
-                -
-              </button>
-              {console.log(p)}
-              <button
-                type="button"
-                className="btn smoothscroll "
-                data-toggle="popover"
-                title="Popover title"
-                data-content="And here's some amazing content. It's very engaging. Right?"
-                onClick={() => props.addSingle(p)}
-              >
-                +
-              </button>
             </div>
             <p>
               <button
@@ -57,7 +52,7 @@ const Item = props => {
                 data-toggle="popover"
                 title="Popover title"
                 data-content="And here's some amazing content. It's very engaging. Right?"
-                onClick={() => props.addCart(p)}
+                onClick={() => add(p)}
               >
                 Add to Cart
               </button>
@@ -68,7 +63,12 @@ const Item = props => {
                 data-toggle="popover"
                 title="Popover title"
                 data-content="And here's some amazing content. It's very engaging. Right?"
-                onClick={() => props.removeCart(p)}
+                onClick={() =>
+                  dispatch({
+                    type: 'Remove item from cart',
+                    payload: p
+                  })
+                }
               >
                 Remove
               </button>
