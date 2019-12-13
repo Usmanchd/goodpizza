@@ -165,7 +165,7 @@ const Header = () => {
                     <Link to="/signin">Login</Link>
                   </li>
                   <li className="page">
-                    <Link to="/signup">Sign in</Link>
+                    <Link to="/signup">Sign up</Link>
                   </li>
                 </React.Fragment>
               )}

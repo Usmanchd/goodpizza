@@ -6,14 +6,26 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+.AApp {
+  display: none;
+}
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
 
-@media screen and (max-width: 968px) {
-  .app {
+@media screen and (max-width: 858px) {
+  .App {
+    display: none;
+  }
+  .App-1 {
+    display: block;
+  }
+  .AApp {
+    display: block;
+  }
+  .AApp-1 {
     display: none;
   }
 }

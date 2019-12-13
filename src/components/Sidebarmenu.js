@@ -1,18 +1,15 @@
-import React, { useContext, useState, useEffect } from 'react';
+import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
 import { store } from '../store/store';
 
+const firebase = require('firebase');
+
 const Sidebarmenu = () => {
-  const { state, dispatch } = useContext(store);
-  const { cart } = state;
-  const [totalprice, settotalprice] = useState(0);
-  useEffect(
-    () =>
-      settotalprice(
-        cart.reduce((amount, c) => (amount += c.count * c.Price), 0)
-      ),
-    [cart]
-  );
+  const { state } = useContext(store);
+  const { userDetails } = state;
+  const handleLogOut = () => {
+    firebase.auth().signOut();
+  };
   return (
     <div>
       <ul className="sidebar">
@@ -21,50 +18,34 @@ const Sidebarmenu = () => {
         </li>
         <li className="dropdown">
           <Link to="/sectionmenu">Menu</Link>
-          {/* <span class="selector"></span>
-          <ul>
-            <li>
-              <Link to="/">Deals</Link>
-            </li>
-            <li>
-              <Link to="">Pizza</Link>
-            </li>
-            <li>
-              <Link to="">Burgers</Link>
-            </li>
-          </ul> */}
         </li>
 
         <li className="page">
           <Link to="/about">About</Link>
         </li>
+
+        {userDetails.email ? (
+          <React.Fragment>
+            <li className="page">
+              <Link>Hello {userDetails.name}</Link>
+            </li>
+            <li className="page" onClick={handleLogOut}>
+              <Link>Logout</Link>
+            </li>
+          </React.Fragment>
+        ) : (
+          <React.Fragment>
+            <li className="page">
+              <Link to="/signin">Login</Link>
+            </li>
+            <li className="page">
+              <Link to="/signup">Sign up</Link>
+            </li>
+          </React.Fragment>
+        )}
+
         <li className="more dropdown">
-          <Link to="/cart">
-            <i className="fa fa-ellipsis-v" aria-hidden="true"></i>
-          </Link>
-          <span className="selector"></span>
-          <ul style={{ padding: '5px' }}>
-            {cart.map((c, i) => (
-              <li key={i}>
-                <p>
-                  {c.name}
-                  <span
-                    style={{ cursor: 'pointer' }}
-                    onClick={() =>
-                      dispatch({
-                        type: 'Remove item from cart',
-                        payload: c
-                      })
-                    }
-                  >
-                    X
-                  </span>
-                </p>
-              </li>
-            ))}
-            <hr />
-            <p>Total: {totalprice.toFixed(2)}</p>
-          </ul>
+          <Link to="/cart">Cart</Link>
         </li>
       </ul>
     </div>

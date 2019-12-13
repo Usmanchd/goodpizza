@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import signupimg from './images/bg-1.jpg';
+import signupimg from './images/bg-2.jpg';
 import { Link, useHistory } from 'react-router-dom';
 
 const firebase = require('firebase');
