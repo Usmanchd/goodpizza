@@ -13,6 +13,9 @@ const Sectionmenu = () => {
           <Route path={`/sectionmenu/product/:name`}>
             <Item />
           </Route>
+          <Route path={`/product/:name`}>
+            <Item />
+          </Route>
           <Route path={`${match.path}/:name`}>
             <div className="row justify-content-center mb-5">
               <div className="col-md-10 text-center">

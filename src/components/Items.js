@@ -37,9 +37,10 @@ function Items() {
       {products.map((product, index) => {
         return (
           <div key={index} className="grid">
-            <Link to={`sectionmenu/product/${product.name}`}>
+            <Link to={`/sectionmenu/product/${product.name}`}>
               <img src={product.image} alt="itemImage" />
             </Link>
+
             <div className="d">
               <p>
                 {/* <b>Name :</b> */}

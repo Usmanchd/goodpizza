@@ -1,5 +1,7 @@
 import React, { useState, useContext } from 'react';
-import { useParams } from 'react-router-dom';
+import { useParams, Link } from 'react-router-dom';
+import { arrowLeft2 } from 'react-icons-kit/icomoon/arrowLeft2';
+import { Icon } from 'react-icons-kit';
 import './item.css';
 import { store } from '../store/store';
 
@@ -40,18 +42,23 @@ const Item = () => {
               <img src={p.image} alt="sure" />
             </div>
             <div>
-              <p>{p.name}</p>
-              <p>{p.Price}</p>
-              <p>{p.description}</p>
-              <p>{p.category}</p>
+              <p>
+                <strong>Description</strong>:{p.description}
+              </p>
+              <p>
+                <strong>Price</strong> : {p.Price}
+              </p>
+
+              <p style={{ textAlign: 'center' }}>
+                <strong>{p.category.toUpperCase()}</strong>
+              </p>
             </div>
             <p>
               <button
                 type="button"
-                className="btn smoothscroll "
+                className="btn smoothscroll pb_outline-dark rounded-0 btn-xl pb_font-13 pb_letter-spacing-2 p-3"
                 data-toggle="popover"
                 title="Popover title"
-                data-content="And here's some amazing content. It's very engaging. Right?"
                 onClick={() => add(p)}
               >
                 Add to Cart
@@ -59,10 +66,9 @@ const Item = () => {
               <br />
               <button
                 type="button"
-                className="btn smoothscroll "
+                className="btn smoothscroll pb_outline-dark rounded-0 btn-xl pb_font-13 pb_letter-spacing-2 p-3"
                 data-toggle="popover"
                 title="Popover title"
-                data-content="And here's some amazing content. It's very engaging. Right?"
                 onClick={() =>
                   dispatch({
                     type: 'Remove item from cart',
@@ -76,6 +82,25 @@ const Item = () => {
           </React.Fragment>
         ))}
       </div>
+      <Link to="/sectionmenu/All">
+        <button
+          type="button"
+          className="btn btn-outline-secondary m-2"
+          style={{
+            padding: '1.5rem 2rem',
+            border: 'none !important'
+          }}
+        >
+          <Icon
+            icon={arrowLeft2}
+            size={24}
+            style={{
+              marginRight: '10px'
+            }}
+          ></Icon>
+          Back to Menu
+        </button>
+      </Link>
     </React.Fragment>
   );
 };

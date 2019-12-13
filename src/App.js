@@ -46,9 +46,7 @@ function App() {
     <React.Fragment>
       <div className={showMobVersion.webVer}>
         <div className="probootstrap-loader"></div>
-
         <Header />
-
         <Switch>
           <Route path="/cart">
             <ScrollToTop>
@@ -134,7 +132,7 @@ function App() {
           title="Popover title"
           onClick={handleClick}
         >
-          Click Here to See Webversion
+          Click Here if you like to See Website version
         </button>
       </div>
     </React.Fragment>
