@@ -1,24 +1,26 @@
 {
   "files": {
-    "main.css": "/goodpizza/static/css/main.79b49b44.chunk.css",
-    "main.js": "/goodpizza/static/js/main.64fe9ca3.chunk.js",
-    "main.js.map": "/goodpizza/static/js/main.64fe9ca3.chunk.js.map",
+    "main.css": "/goodpizza/static/css/main.1cf9d6cb.chunk.css",
+    "main.js": "/goodpizza/static/js/main.f0e9c498.chunk.js",
+    "main.js.map": "/goodpizza/static/js/main.f0e9c498.chunk.js.map",
     "runtime-main.js": "/goodpizza/static/js/runtime-main.f8c329b8.js",
     "runtime-main.js.map": "/goodpizza/static/js/runtime-main.f8c329b8.js.map",
     "static/css/2.5361492b.chunk.css": "/goodpizza/static/css/2.5361492b.chunk.css",
-    "static/js/2.c2bb4f46.chunk.js": "/goodpizza/static/js/2.c2bb4f46.chunk.js",
-    "static/js/2.c2bb4f46.chunk.js.map": "/goodpizza/static/js/2.c2bb4f46.chunk.js.map",
+    "static/js/2.8e397b67.chunk.js": "/goodpizza/static/js/2.8e397b67.chunk.js",
+    "static/js/2.8e397b67.chunk.js.map": "/goodpizza/static/js/2.8e397b67.chunk.js.map",
     "index.html": "/goodpizza/index.html",
-    "precache-manifest.c156af4489109c9cb3b82516d7e8cc32.js": "/goodpizza/precache-manifest.c156af4489109c9cb3b82516d7e8cc32.js",
+    "precache-manifest.0bc3ac3379c51e517f500988634df2ff.js": "/goodpizza/precache-manifest.0bc3ac3379c51e517f500988634df2ff.js",
     "service-worker.js": "/goodpizza/service-worker.js",
     "static/css/2.5361492b.chunk.css.map": "/goodpizza/static/css/2.5361492b.chunk.css.map",
-    "static/css/main.79b49b44.chunk.css.map": "/goodpizza/static/css/main.79b49b44.chunk.css.map",
+    "static/css/main.1cf9d6cb.chunk.css.map": "/goodpizza/static/css/main.1cf9d6cb.chunk.css.map",
     "static/media/1.jpg": "/goodpizza/static/media/1.c81cea7c.jpg",
     "static/media/2.jpg": "/goodpizza/static/media/2.142f63c6.jpg",
     "static/media/3.jpg": "/goodpizza/static/media/3.485ec987.jpg",
     "static/media/4.jpg": "/goodpizza/static/media/4.0998b5b6.jpg",
     "static/media/5.jpg": "/goodpizza/static/media/5.019e3c43.jpg",
     "static/media/6.jpg": "/goodpizza/static/media/6.0b94137b.jpg",
+    "static/media/bg-1.jpg": "/goodpizza/static/media/bg-1.aa0fd6d6.jpg",
+    "static/media/bg-2.jpg": "/goodpizza/static/media/bg-2.735eaf2d.jpg",
     "static/media/cover.jpg": "/goodpizza/static/media/cover.a80e2015.jpg",
     "static/media/cover2.jpg": "/goodpizza/static/media/cover2.f8d33c27.jpg",
     "static/media/cover3.png": "/goodpizza/static/media/cover3.a51ac3f5.png",
@@ -27,8 +29,8 @@
   "entrypoints": [
     "static/js/runtime-main.f8c329b8.js",
     "static/css/2.5361492b.chunk.css",
-    "static/js/2.c2bb4f46.chunk.js",
-    "static/css/main.79b49b44.chunk.css",
-    "static/js/main.64fe9ca3.chunk.js"
+    "static/js/2.8e397b67.chunk.js",
+    "static/css/main.1cf9d6cb.chunk.css",
+    "static/js/main.f0e9c498.chunk.js"
   ]
 }
