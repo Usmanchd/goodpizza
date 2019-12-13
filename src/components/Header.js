@@ -2,10 +2,12 @@ import React, { useEffect, useState, useContext } from 'react';
 import { Link } from 'react-router-dom';
 import { Icon } from 'react-icons-kit';
 import { shoppingCart } from 'react-icons-kit/fa/shoppingCart';
-import { store } from './store/store';
+import { store } from '../store/store';
+const firebase = require('firebase');
+
 const Header = () => {
   const { state, dispatch } = useContext(store);
-  const { cart, category } = state;
+  const { cart, category, userDetails } = state;
   const [totalprice, settotalprice] = useState(0);
   useEffect(
     () =>
@@ -14,6 +16,22 @@ const Header = () => {
       ),
     [cart]
   );
+  const handleLogOut = () => {
+    firebase.auth().signOut();
+    // dispatch({ type: 'Set Email', payload: '' });
+    // console.log(userDetails);
+  };
+
+  // useEffect(() => {
+  //   firebase
+  //     .auth()
+  //     .onAuthStateChanged(user =>
+  //       user
+  //         ? dispatch({ type: 'Set Email', payload: user.email })
+  //         : dispatch({ type: 'Set Email', payload: '' })
+  //     );
+  //   // console.log(user);
+  // }, []);
   return (
     <React.Fragment>
       <nav
@@ -46,11 +64,11 @@ const Header = () => {
                 }
               >
                 <h3
-                  style={{
-                    position: 'absolute',
-                    left: '50%',
-                    transform: 'translatex(-50%)'
-                  }}
+                // style={{
+                //   position: 'absolute',
+                //   left: '50%',
+                //   transform: 'translatex(-50%)'
+                // }}
                 >
                   <span style={{ color: '#c4302b' }}>Good</span> Pizza
                 </h3>
@@ -105,7 +123,7 @@ const Header = () => {
               <li className="more dropdown">
                 <Link to="/cart">
                   <Icon icon={shoppingCart} />
-                  {/* <i className="fa fa-ellipsis-v" aria-hidden="true"></i> */}
+
                   <span>({cart.length})</span>
                 </Link>
                 <span className="selector"></span>
@@ -132,6 +150,25 @@ const Header = () => {
                   <p>Total: {totalprice}</p>
                 </ul>
               </li>
+              {userDetails.email ? (
+                <React.Fragment>
+                  <li className="page">
+                    <Link>Hello {userDetails.name}</Link>
+                  </li>
+                  <li className="page" onClick={handleLogOut}>
+                    <Link>Logout</Link>
+                  </li>
+                </React.Fragment>
+              ) : (
+                <React.Fragment>
+                  <li className="page">
+                    <Link to="/signin">Login</Link>
+                  </li>
+                  <li className="page">
+                    <Link to="/signup">Sign in</Link>
+                  </li>
+                </React.Fragment>
+              )}
             </ul>
           </div>
           <div className="toggle">

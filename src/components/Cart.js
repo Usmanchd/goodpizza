@@ -1,6 +1,6 @@
 import React, { useContext, useState, useEffect } from 'react';
 import './Cart.css';
-import { store } from './store/store';
+import { store } from '../store/store';
 import { Link } from 'react-router-dom';
 import { Icon } from 'react-icons-kit';
 import { arrowLeft2 } from 'react-icons-kit/icomoon/arrowLeft2';
@@ -11,7 +11,7 @@ import { minus } from 'react-icons-kit/fa/minus';
 export default function Cart() {
   const { state, dispatch } = useContext(store);
   const { cart } = state;
-  console.log(cart);
+
   const [totalprice, settotalprice] = useState(0);
   useEffect(
     () =>
@@ -196,9 +196,11 @@ export default function Cart() {
                 <h5 className="font-weight-bold"> ₨{totalprice.toFixed(2)}</h5>
               </li>
             </ul>
-            <span href="#" className="btn btn-dark rounded-pill py-2 btn-block">
-              Procceed to checkout
-            </span>
+            <Link to="/checkout">
+              <span className="btn btn-dark rounded-pill py-2 btn-block">
+                Procceed to checkout
+              </span>
+            </Link>
           </div>
         </div>
       </div>

@@ -1,6 +1,6 @@
 import React, { useContext, useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import { store } from './store/store';
+import { store } from '../store/store';
 
 const Sidebarmenu = () => {
   const { state, dispatch } = useContext(store);

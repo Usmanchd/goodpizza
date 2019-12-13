@@ -1,9 +1,9 @@
-import logo1 from '../img/1.jpg';
-import logo2 from '../img/2.jpg';
-import logo3 from '../img/3.jpg';
-import logo4 from '../img/4.jpg';
-import logo5 from '../img/5.jpg';
-import logo6 from '../img/6.jpg';
+import logo1 from '../components/img/1.jpg';
+import logo2 from '../components/img/2.jpg';
+import logo3 from '../components/img/3.jpg';
+import logo4 from '../components/img/4.jpg';
+import logo5 from '../components/img/5.jpg';
+import logo6 from '../components/img/6.jpg';
 
 export const Products = [
   {

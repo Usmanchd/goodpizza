@@ -1,16 +1,39 @@
-import React from 'react';
+import React, { useEffect, useContext } from 'react';
 import './App.css';
-import { Switch, Route } from 'react-router-dom';
+import { Switch, Route, useHistory } from 'react-router-dom';
 import ScrollToTop from 'react-router-scroll-top';
-import Header from './Header';
-import Home from './Home';
-import About from './About';
-import Cart from './Cart';
-import Footer from './Footer';
-import Sectionmenu from './Sectionmenu';
-import Sidebarmenu from './Sidebarmenu';
-
+import Header from './components/Header';
+import Home from './components/Home';
+import About from './components/About';
+import Cart from './components/Cart';
+import Footer from './components/Footer';
+import Sectionmenu from './components/Sectionmenu';
+import Sidebarmenu from './components/Sidebarmenu';
+import Signin from './forms/Signin';
+import Signup from './forms/Signup';
+import CheckOut from './components/CheckOut';
+import { store } from './store/store';
+const firebase = require('firebase');
 function App() {
+  const history = useHistory();
+  const { dispatch } = useContext(store);
+  useEffect(() => {
+    firebase.auth().onAuthStateChanged(user => {
+      if (user) {
+        firebase
+          .firestore()
+          .collection('users')
+          .doc(user.email)
+          .get()
+          .then(doc => {
+            let _user = doc.data();
+            dispatch({ type: 'Set Email', payload: _user });
+          }, console.log('err'));
+      } else {
+        dispatch({ type: 'Set Email', payload: '' });
+      }
+    });
+  }, [dispatch, history]);
   return (
     <div className="App">
       <div className="probootstrap-loader"></div>
@@ -21,6 +44,11 @@ function App() {
         <Route path="/cart">
           <ScrollToTop>
             <Cart />
+          </ScrollToTop>
+        </Route>
+        <Route path="/checkout">
+          <ScrollToTop>
+            <CheckOut />
           </ScrollToTop>
         </Route>
 
@@ -39,6 +67,17 @@ function App() {
         <Route path="/navbar-slide">
           <ScrollToTop>
             <Sidebarmenu />
+          </ScrollToTop>
+        </Route>
+        <Route path="/signin">
+          <ScrollToTop>
+            <Signin />
+          </ScrollToTop>
+        </Route>
+
+        <Route path="/signup">
+          <ScrollToTop>
+            <Signup />
           </ScrollToTop>
         </Route>
 

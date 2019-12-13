@@ -1,7 +1,7 @@
 import React, { useState, useContext } from 'react';
 import { useParams } from 'react-router-dom';
 import './item.css';
-import { store } from './store/store';
+import { store } from '../store/store';
 
 const Item = () => {
   const { state, dispatch } = useContext(store);

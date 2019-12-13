@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useContext } from 'react';
 import './Items.css';
 import { Link, useRouteMatch, useParams } from 'react-router-dom';
-import { store } from './store/store';
+import { store } from '../store/store';
 function Items() {
   const { state, dispatch } = useContext(store);
   const { Products, selectedCategory: category, cart } = state;
