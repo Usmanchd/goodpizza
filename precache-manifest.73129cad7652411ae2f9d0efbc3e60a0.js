@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "fbdb9c4090789c5636177cb382eba68a",
+    "revision": "6511d06e7a0dc9f3690d716273239516",
     "url": "/goodpizza/index.html"
   },
   {
@@ -8,7 +8,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/goodpizza/static/css/2.5361492b.chunk.css"
   },
   {
-    "revision": "cc1e08429b2de1a51b4d",
+    "revision": "29591fa32d0c4452c57f",
     "url": "/goodpizza/static/css/main.254c848c.chunk.css"
   },
   {
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/goodpizza/static/js/2.b99d06fe.chunk.js"
   },
   {
-    "revision": "cc1e08429b2de1a51b4d",
-    "url": "/goodpizza/static/js/main.c8d9bb85.chunk.js"
+    "revision": "29591fa32d0c4452c57f",
+    "url": "/goodpizza/static/js/main.f8d816d4.chunk.js"
   },
   {
     "revision": "6cb80ac36b14426364ff",
