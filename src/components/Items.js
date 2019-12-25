@@ -2,6 +2,7 @@ import React, { useState, useEffect, useContext } from 'react';
 import './Items.css';
 import { Link, useRouteMatch, useParams } from 'react-router-dom';
 import { store } from '../store/store';
+
 function Items() {
   const { state, dispatch } = useContext(store);
   const { Products, selectedCategory: category, cart } = state;
@@ -29,7 +30,6 @@ function Items() {
       let newproduct = { ...product, count: cart[index].count + 1 };
       dispatch({ type: 'Increment Count', payload: newproduct });
     }
-    console.log(cart);
   };
 
   return (

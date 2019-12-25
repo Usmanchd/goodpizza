@@ -2,6 +2,7 @@ import React, { useEffect, useState, useContext } from 'react';
 import { Link } from 'react-router-dom';
 import { Icon } from 'react-icons-kit';
 import { shoppingCart } from 'react-icons-kit/fa/shoppingCart';
+import { bin } from 'react-icons-kit/icomoon/bin';
 import { store } from '../store/store';
 const firebase = require('firebase');
 
@@ -130,7 +131,7 @@ const Header = () => {
                 <ul style={{ padding: '5px' }}>
                   {cart.map((c, i) => (
                     <li key={i}>
-                      <p>
+                      <p style={{display:'flex', justifyContent: 'space-between'}}>
                         {c.name}
                         <span
                           style={{ cursor: 'pointer' }}
@@ -141,7 +142,11 @@ const Header = () => {
                             })
                           }
                         >
-                          X
+                           <Icon
+                             icon={bin}
+                             size={16}
+                            //  style={{ marginRight: '10px' }}
+                            ></Icon>
                         </span>
                       </p>
                     </li>

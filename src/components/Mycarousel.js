@@ -36,17 +36,18 @@ in prop sliderBoxStyle here because we could
 not init the height of parent element */
 
 let sliderBoxStyle = {
-  // height: '450px',
+  height: '450px',
   width: '100%'
   // , background: "tranparent"
 };
 
 let itemsStyle = {
-  // ,height: "100%", padding: "0px"
-  // , padding: "15px"
-  // , background: "#FFCA28"
-  // , borderRadius: "4px"
-  // , margin: "0px 0px", padding: "0px"
+  width: '100%',
+  height: "100%", 
+  padding: "0px"
+  , background: "#FFCA28"
+  , borderRadius: "4px"
+  , margin: "0px 0px"
 };
 
 let textBoxStyle = {
@@ -71,8 +72,8 @@ let buttonSetting = {
 };
 
 let manner = {
-  // autoSliding: {interval: "4s"}
-  //, duration: "0.3s"
+  autoSliding: {interval: "4s"}
+  , duration: "0.5s"
 };
 
 const Mycarousel = () => {

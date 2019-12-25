@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import signupimg from './images/bg-1.jpg';
 import { Link, useHistory } from 'react-router-dom';
 
@@ -13,22 +13,40 @@ const Signup = () => {
     cpass: '',
     address: '',
     phonenum: '',
-    formerr: ''
+    formerr: '',
+    isLoading: false
   });
+
+  useEffect(() => {
+    if (state.formerr) {
+      setTimeout(() => {
+        setstate({ ...state, formerr: '' });
+      }, 4000);
+    }
+  }, [state.formerr]);
 
   const handletyping = e => {
     setstate({ ...state, [e.target.name]: e.target.value });
   };
 
   const validatePass = () => {
-    if (state.pass !== state.cpass) {
-      setstate({ ...state, formerr: 'Password doesnt match' });
+    if (
+      state.name === '' ||
+      state.address === '' ||
+      state.phonenum === '' ||
+      state.pass === '' ||
+      state.cpass === ''
+    ) {
+      setstate({ ...state, formerr: 'Please Fill all Details' });
       return false;
+    } else if (state.pass !== state.cpass) {
+      setstate({ ...state, formerr: 'Password doesnt match' });
     } else return true;
   };
 
   const handlesubmit = e => {
     e.preventDefault();
+    setstate({ ...state, isLoading: true });
     if (!validatePass()) return;
     let newuser = {
       name: state.name,
@@ -49,12 +67,16 @@ const Signup = () => {
             .then(
               () => {
                 history.push('/checkout');
-                // dispatch({ type: 'Set Email', payload: state.email });
+                setstate({ ...state, isLoading: false });
               },
-              err => setstate({ ...state, formerr: err.message })
+              err =>
+                setstate({ ...state, formerr: err.message, isLoading: false })
             );
         },
-        err => setstate({ ...state, formerr: err.message })
+        err =>
+          setTimeout(() => {
+            setstate({ ...state, formerr: err.message, isLoading: false });
+          }, 2000)
       );
   };
 
@@ -65,7 +87,6 @@ const Signup = () => {
           <div className="wrap-login100">
             <form className="login100-form validate-form">
               <span className="login100-form-title p-b-34">Account Login</span>
-
               <div
                 className="wrap-input100 rs1-wrap-input100 validate-input m-b-20"
                 data-validate="Type Email"
@@ -124,7 +145,6 @@ const Signup = () => {
                 />
                 <span className="focus-input100"></span>
               </div>
-
               <div
                 className="wrap-input100 rs2-wrap-input100 validate-input m-b-20"
                 data-validate="Type Contact Number"
@@ -139,7 +159,6 @@ const Signup = () => {
                 />
                 <span className="focus-input100"></span>
               </div>
-
               <div
                 className="wrap-input100 rs2-wrap-input100 validate-input m-b-20"
                 data-validate="Type Address"
@@ -154,20 +173,22 @@ const Signup = () => {
                 />
                 <span className="focus-input100"></span>
               </div>
-
+              {state.formerr && (
+                <p className="alert alert-danger" style={{ width: '100%' }}>
+                  {state.formerr}
+                </p>
+              )}
               <div className="container-login100-form-btn">
                 <button className="login100-form-btn" onClick={handlesubmit}>
-                  Sign Up
+                  Signup
                 </button>
               </div>
-              {state.formerr && <p>{state.formerr}</p>}
-
+              )}
               <div className="w-full text-center p-t-27 p-b-239">
                 <span className="txt1">Forgot</span>
 
                 <span className="txt2">User name / password?</span>
               </div>
-
               <div className="w-full text-center">
                 <Link to="/signin" className="txt3">
                   Sign in
@@ -182,6 +203,31 @@ const Signup = () => {
           </div>
         </div>
       </div>
+      {state.isLoading && (
+        <div id="pb_loader" className="show fullscreen">
+          <svg className="circular" width="48px" height="48px">
+            <circle
+              className="path-bg"
+              cx="24"
+              cy="24"
+              r="22"
+              fill="none"
+              stroke-width="4"
+              stroke="#eeeeee"
+            />
+            <circle
+              className="path"
+              cx="24"
+              cy="24"
+              r="22"
+              fill="none"
+              stroke-width="4"
+              stroke-miterlimit="10"
+              stroke="#FDA04F"
+            />
+          </svg>
+        </div>
+      )}
     </div>
   );
 };

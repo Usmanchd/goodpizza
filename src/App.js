@@ -13,6 +13,7 @@ import Signin from './forms/Signin';
 import Signup from './forms/Signup';
 import CheckOut from './components/CheckOut';
 import { store } from './store/store';
+
 const firebase = require('firebase');
 
 function App() {
@@ -23,6 +24,7 @@ function App() {
   const handleClick = () => {
     setshowMobVersion({ ...showMobVersion, webVer: 'App-1', mobVer: 'AApp-1' });
   };
+
   const history = useHistory();
   const { dispatch } = useContext(store);
   useEffect(() => {

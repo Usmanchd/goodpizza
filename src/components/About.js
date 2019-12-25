@@ -1,5 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import about1 from '../forms/images/bg-1.jpg';
+import about2 from '../forms/images/bg-2.jpg'
 const About = () => {
   return (
     <React.Fragment>
@@ -11,7 +13,7 @@ const About = () => {
                 <div className="col">
                   <p>
                     <img
-                      src="assets/images/restaurant/800x975/img_1.jpg"
+                      src={about2}
                       alt="Instant"
                       className="img-fluid"
                     />
@@ -20,7 +22,7 @@ const About = () => {
                 <div className="col">
                   <p>
                     <img
-                      src="assets/images/restaurant/800x975/img_2.jpg"
+                      src={about1}
                       alt="Instant"
                       className="img-fluid"
                     />

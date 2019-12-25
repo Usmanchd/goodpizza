@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import signupimg from './images/bg-2.jpg';
 import { Link, useHistory } from 'react-router-dom';
 
@@ -10,8 +10,17 @@ const Signup = () => {
   const [state, setstate] = useState({
     email: '',
     pass: '',
-    error: ''
+    error: '',
+    isLoading: false
   });
+
+  useEffect(() => {
+    if (state.error) {
+      setTimeout(() => {
+        setstate({ ...state, error: '' });
+      }, 4000);
+    }
+  }, [state.error]);
 
   const handleUserTyping = e => {
     setstate({ ...state, [e.target.name]: e.target.value });
@@ -19,16 +28,17 @@ const Signup = () => {
 
   const handleSubmit = e => {
     e.preventDefault();
-
+    setstate({ ...state, isLoading: true });
     firebase
       .auth()
       .signInWithEmailAndPassword(state.email, state.pass)
       .then(
         () => {
+          setstate({ ...state, isLoading: false });
           history.push('./cart');
         },
         err => {
-          setstate({ ...state, error: err.message });
+          setstate({ ...state, error: err.message, isLoading: false });
         }
       );
   };
@@ -70,7 +80,11 @@ const Signup = () => {
                 />
                 <span className="focus-input100"></span>
               </div>
-              {state.error && <p>{state.error}</p>}
+              {state.error && (
+                <p className="alert alert-danger" style={{ width: '100%' }}>
+                  {state.error}
+                </p>
+              )}
               <div className="container-login100-form-btn">
                 <button className="login100-form-btn" onClick={handleSubmit}>
                   Sign in
@@ -97,6 +111,31 @@ const Signup = () => {
           </div>
         </div>
       </div>
+      {state.isLoading && (
+        <div id="pb_loader" className="show fullscreen">
+          <svg className="circular" width="48px" height="48px">
+            <circle
+              className="path-bg"
+              cx="24"
+              cy="24"
+              r="22"
+              fill="none"
+              stroke-width="4"
+              stroke="#eeeeee"
+            />
+            <circle
+              className="path"
+              cx="24"
+              cy="24"
+              r="22"
+              fill="none"
+              stroke-width="4"
+              stroke-miterlimit="10"
+              stroke="#FDA04F"
+            />
+          </svg>
+        </div>
+      )}
     </div>
   );
 };
