@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import signupimg from './images/bg-1.jpg';
 import { Link, useHistory } from 'react-router-dom';
 
@@ -16,14 +16,6 @@ const Signup = () => {
     formerr: '',
     isLoading: false
   });
-
-  useEffect(() => {
-    if (state.formerr) {
-      setTimeout(() => {
-        setstate({ ...state, formerr: '' });
-      }, 4000);
-    }
-  }, [state.formerr]);
 
   const handletyping = e => {
     setstate({ ...state, [e.target.name]: e.target.value });
@@ -183,7 +175,6 @@ const Signup = () => {
                   Signup
                 </button>
               </div>
-              )}
               <div className="w-full text-center p-t-27 p-b-239">
                 <span className="txt1">Forgot</span>
 

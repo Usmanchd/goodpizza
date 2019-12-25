@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import signupimg from './images/bg-2.jpg';
 import { Link, useHistory } from 'react-router-dom';
 
@@ -13,14 +13,6 @@ const Signup = () => {
     error: '',
     isLoading: false
   });
-
-  useEffect(() => {
-    if (state.error) {
-      setTimeout(() => {
-        setstate({ ...state, error: '' });
-      }, 4000);
-    }
-  }, [state.error]);
 
   const handleUserTyping = e => {
     setstate({ ...state, [e.target.name]: e.target.value });
